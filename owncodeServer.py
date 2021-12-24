@@ -39,13 +39,13 @@ def process_start(s_sock):
             print ('Invalid input!')
             sendAnswer = ('Invalid input!')
 
-        #s_sock.send(str.encode(sendAnswer))
+        
 
         if not data:
             break
 
         s_sock.send(str.encode(sendAnswer))
-        #s_sock.sendall(str.encode(ok_message))
+        
     s_sock.close()
 	
 if __name__ == '__main__':
@@ -66,7 +66,7 @@ if __name__ == '__main__':
                 print('SOCKET ERROR!')
 
             except Exception as e:
-                print("SIGNAL INTERRUPTED!")
+                print("INTERRUPT!")
                 print(e)
                 sys.exit(1)
     finally:
