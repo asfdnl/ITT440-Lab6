@@ -10,7 +10,7 @@ ok_message = '\nHTTP/1.0 200 OK\n\n'
 nok_message = '\nHTTP/1.0 404 NotFound\n\n'
 
 def process_start(s_sock):
-    s_sock.send(str.encode("Python Calculator (LOG <log>, SQUARE ROOT <sqrt>, EXPONENTIAL <exp>)\n =================================== \n Instruction: log/sqrt/exp <number>\n Example: log >
+    s_sock.send(str.encode("Python Calculator (LOG <log>, SQUARE ROOT <sqrt>, EXPONENTIAL <exp>)\n =================================== \n Instruction: log/sqrt/exp <number>\n Example: log >: log 10\n =================================== \n \t\tType 'exit' to close"))
     while True:
         data = s_sock.recv(2048) #input from client
         data = data.decode("utf-8")
